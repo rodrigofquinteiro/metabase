@@ -108,7 +108,13 @@ export default class AccordionList extends Component {
 
   static defaultProps = {
     style: {},
-    width: 300,
+    /*
+      width used to be 300, but we changed it to include the scrollbar, which is
+      included in the width when display is flex, it's done to unify behavior
+      between chrome and firefox, latter included scrollbar into the width even
+      with display block
+    */
+    width: 315,
     globalSearch: false,
     searchable: section => section.items && section.items.length > 10,
     searchProp: "name",

@@ -285,7 +285,13 @@ export function AggregationPicker({
   }
 
   return (
-    <Box className={className} c="summarize" data-testid="aggregation-picker">
+    <Box
+      className={className}
+      c="summarize"
+      data-testid="aggregation-picker"
+      display="flex"
+      w="100%"
+    >
       <AccordionList
         sections={sections}
         onChange={handleChange}

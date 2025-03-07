@@ -44,7 +44,7 @@ export function ClausePopover({
       onChange={handleChange}
     >
       <Popover.Target>{renderItem(handleOpen)}</Popover.Target>
-      <Popover.Dropdown data-testid="clause-popover">
+      <Popover.Dropdown data-testid="clause-popover" display="flex">
         {renderPopover(handleClose)}
       </Popover.Dropdown>
     </Popover>
